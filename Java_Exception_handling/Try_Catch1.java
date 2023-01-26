@@ -18,6 +18,8 @@ public class Try_Catch1 {
         }
 
         scan.close();
+        
+        
 
     }
 
