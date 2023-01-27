@@ -94,6 +94,15 @@ public class CreateFile {
        
         //3)Using the BufferedWriter class:
         //4)Using the PrintWriter class:
+        // Create a PrintWriter object to write to the file;
+        PrintWriter wrt=new PrintWriter("Java.txt");
+        // Write the data to the file with write method;
+        wrt.write("I am writing file with PrintWriter class !");
+        // Write the data to the file with Println method;
+        wrt.println("\nHello!");
+        wrt.println("Hello!");
+        // Close the PrintWriter object;
+        wrt.close();
 
     }
 }
