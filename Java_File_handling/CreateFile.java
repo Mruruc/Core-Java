@@ -93,6 +93,16 @@ public class CreateFile {
         fos2.close();
        
         //3)Using the BufferedWriter class:
+         // Create a FileWriter object to write to the file;
+        FileWriter writer=new FileWriter("Java.txt",true);
+        // Create a BufferedWriter object to write to the file
+        BufferedWriter bfrw=new BufferedWriter(writer);
+        // Write the data to the file
+        bfrw.write("I am writing a file with bufferedWriter class;");
+        // Close the BufferedWriter object;
+        bfrw.close();
+        writer.close();
+
         //4)Using the PrintWriter class:
         // Create a PrintWriter object to write to the file;
         PrintWriter wrt=new PrintWriter("Java.txt");
