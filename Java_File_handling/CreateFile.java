@@ -140,6 +140,20 @@ public class CreateFile {
         
         
         //4)Using the BufferedReader classes;
+         //// Create a FileReader object to read the file in form of raw byte;
+        FileReader file=new FileReader("Java.txt");
+       //// Create a BufferedReader object to read the file in form of line;
+        BufferedReader bf=new BufferedReader(file);
+        //System.out.println(bf.readLine()); // it will read first line
+        // to read whole file we can use readLine method;
+        String str=bf.readLine();
+        while(str !=null){
+            System.out.println(str);
+            str=bf.readLine();
+        }
+        // Close the BufferedReader object and file ;
+        bf.close();
+        file.close();
     }
  }
 
