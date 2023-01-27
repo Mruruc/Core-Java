@@ -56,6 +56,42 @@ public class CreateFile {
 
 
         //2)Using the FileOutputStream class:
+       // we create a file for working on it;
+        File file=new File("Java.txt");
+        try{
+            file.createNewFile();
+            if(file.exists()){
+                System.out.println("File is created");
+            }else{
+                System.out.println("File did'not creat");
+            }
+        }
+        catch(IOException e){
+            System.out.println(e.toString());
+        }
+        // writing a file with FileOutputStream class;
+        // we can use this class to write data on a file in form of Bytes;
+        FileOutputStream fos=null;
+        String str="I am writing a file in form of byte !\n woahhh :))";
+        try{
+             fos=new FileOutputStream(file);
+             byte[] array=str.getBytes();
+             fos.write(array);
+        }
+        catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+        finally {
+            fos.close();
+            System.out.println("Fos is closed !");
+        }
+        // if we do not want to overwrite we can use append method;
+        FileOutputStream fos2=new FileOutputStream(file,true);
+        String addingFile=" \n I write at the end of file with append() method;\nwoohah!";
+        byte[] arr=addingFile.getBytes();
+        fos2.write(arr);
+        fos2.close();
+       
         //3)Using the BufferedWriter class:
         //4)Using the PrintWriter class:
 
@@ -91,6 +127,18 @@ public class CreateFile {
         reader.close();
 
         //3)Using the FileInputStream class;
+         ///reading a file with  FileInputStream class in form of byte;
+        FileInputStream fis=new FileInputStream(file);
+        System.out.println((char)fis.read()); // its read just one byte which is first letter I in our file.
+        // to read whole file we can use while loop;
+        int i;
+        while((i=fis.read()) != -1){
+            System.out.print((char)i);
+        }
+
+        fis.close();
+        
+        
         //4)Using the BufferedReader classes;
     }
  }
