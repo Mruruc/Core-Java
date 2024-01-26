@@ -6,27 +6,15 @@
 
     
     <groupId>com.mruruc</groupId>
-    <artifactId>java-string</artifactId>
+    <artifactId>file-handling</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <description>
-        understanding how the string work in java.
+        file handling in java.
     </description>
-
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-
-    <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.10.0</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-
 </project>
